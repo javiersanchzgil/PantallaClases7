@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PantallaClases7</string>
+    <string name="aceptar">aceptar</string>
+    <string name="elfo">elfo</string>
+    <string name="guerrero">guerrero</string>
+    <string name="ladron">ladron</string>
+    <string name="mago">mago</string>
+</resources>
