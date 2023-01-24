@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
             binding.imagen.setImageResource(R.drawable.imagenladron)
 
         }
-        binding.elfo.setOnClickListener(){
-            binding.imagen.setImageResource(R.drawable.imagenelfo)
+        binding.arquero.setOnClickListener(){
+            binding.imagen.setImageResource(R.drawable.imagenarquero)
 
         }
 
@@ -32,19 +32,13 @@ class MainActivity : AppCompatActivity() {
             binding.imagen.setImageResource(R.drawable.imagenguerrero)
         }
 
-        //si pulsas el boton aceptar te manda a la segunda pantalla
+
         binding.aceptar.setOnClickListener(){
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
 
-        //si no pulsas algun boton no te deja pasar a la segunda pantalla
-        binding.aceptar.setOnClickListener(){
-            if(binding.ladron.isChecked || binding.elfo.isChecked || binding.mago.isChecked || binding.guerrero.isChecked){
-                val intent = Intent(this, MainActivity2::class.java)
-                startActivity(intent)
-            }
-        }
+
 
 
 

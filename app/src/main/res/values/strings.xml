@@ -5,4 +5,11 @@
     <string name="guerrero">guerrero</string>
     <string name="ladron">ladron</string>
     <string name="mago">mago</string>
+    <string name="enano">enano</string>
+    <string name="hombre">hombre</string>
+    <string name="hobbit">hobbit</string>
+    <string name="orco">orco</string>
+    <string name="aceptar2">aceptar2</string>
+    <string name="todo">TODO</string>
+    <string name="arquero">arquero</string>
 </resources>

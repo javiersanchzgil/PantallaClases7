@@ -25,7 +25,7 @@
         android:layout_marginBottom="44dp"
         android:text="@string/guerrero"
         app:layout_constraintBottom_toTopOf="@+id/aceptar"
-        app:layout_constraintEnd_toStartOf="@+id/elfo"
+        app:layout_constraintEnd_toStartOf="@+id/arquero"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,16 +36,16 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="48dp"
         android:text="@string/mago"
-        app:layout_constraintBottom_toTopOf="@+id/elfo"
+        app:layout_constraintBottom_toTopOf="@+id/arquero"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/elfo"
+        android:id="@+id/arquero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="44dp"
-        android:text="@string/elfo"
+        android:text="@string/arquero"
         app:layout_constraintBottom_toTopOf="@+id/aceptar"
         app:layout_constraintEnd_toEndOf="parent" />
 
