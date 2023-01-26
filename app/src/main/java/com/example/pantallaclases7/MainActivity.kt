@@ -13,30 +13,38 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        var imagen=0
         binding.ladron.setOnClickListener(){
             binding.imagen.setImageResource(R.drawable.imagenladron)
+            imagen=R.drawable.imagenladron
 
         }
         binding.arquero.setOnClickListener(){
             binding.imagen.setImageResource(R.drawable.imagenarquero)
-
+            imagen=R.drawable.imagenarquero
         }
 
         binding.mago.setOnClickListener(){
             binding.imagen.setImageResource(R.drawable.imagenmago)
-
+            imagen=R.drawable.imagenmago
         }
 
         binding.guerrero.setOnClickListener(){
             binding.imagen.setImageResource(R.drawable.imagenguerrero)
+            imagen=R.drawable.imagenguerrero
         }
 
 
         binding.aceptar.setOnClickListener(){
             val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("ImagenClase", imagen)
             startActivity(intent)
         }
+
+
+
+
+
 
 
 
