@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity4">
 
+    <ImageView
+        android:id="@+id/terreno"
+        android:layout_width="381dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/terreno" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:autoSizeTextType="uniform"
+        android:text="&quot;Comienza la aventura, pulsa el DADO para avanzar. CUIDADO puedes encontrarte enemigos&quot; "
+        android:textAlignment="center"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terreno"
+        app:srcCompat="@drawable/dado3"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
