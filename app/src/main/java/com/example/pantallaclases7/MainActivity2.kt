@@ -10,31 +10,46 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        var imagen= 0
+        var imagenC = 0
+        var imagenR = 0
+        var raza = ""
+        var clase = intent.getStringExtra("clase").toString()
 
         val binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         binding.orco.setOnClickListener(){
             binding.imageView.setImageResource(R.drawable.orcoimagen)
-            imagen=R.drawable.orcoimagen
+            imagenC=R.drawable.orcoimagen
+            raza = "orcoimagen"
         }
 
         binding.enano.setOnClickListener(){
             binding.imageView.setImageResource(R.drawable.enanoimagen)
-            imagen=R.drawable.enanoimagen
+            imagenC=R.drawable.enanoimagen
+            raza = "enanoimagen"
         }
 
         binding.hombre.setOnClickListener(){
             binding.imageView.setImageResource(R.drawable.hombresimagen)
-            imagen=R.drawable.hombresimagen
+            imagenC=R.drawable.hombresimagen
+            raza = "hombresimagen"
         }
 
+        intent.getIntExtra("ImagenRaza",imagenR)
+        intent.getIntExtra("ImagenClase",imagenC)
+
+
         binding.aceptar2.setOnClickListener(){
-            intent.putExtra("ImagenRaza", imagen)
-            val imagenClase = intent.getIntExtra("ImagenClase", 0)
-            val intent = Intent(this, MainActivity3::class.java)
+            val intent = Intent(this@MainActivity2, MainActivity3::class.java)
+            intent.putExtra("clase",clase)
+            intent.putExtra("raza",raza)
             startActivity(intent)
+
+
+
         }
 
 
