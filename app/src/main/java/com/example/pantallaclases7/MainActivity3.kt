@@ -16,12 +16,14 @@ class MainActivity3 : AppCompatActivity() {
 
         var clase = intent.getStringExtra("clase")
         var raza = intent.getStringExtra("raza")
+        var mochila:Int = 100
+
+
 
 
         binding.fuerza2.setText((10..15).random().toString())
 
         binding.defensa2.setText((1..5).random().toString())
-
 
         println(clase)
 
@@ -57,12 +59,17 @@ class MainActivity3 : AppCompatActivity() {
 
         binding.botonComenzar.setOnClickListener(){
             val intent = Intent(this@MainActivity3, MainActivity4::class.java)
+            intent.putExtra("mochila",mochila)
             startActivity(intent)
+
         }
         binding.botonVolver.setOnClickListener(){
             val intent = Intent(this@MainActivity3, MainActivity::class.java)
             startActivity(intent)
         }
+
+
+
 
 
 
