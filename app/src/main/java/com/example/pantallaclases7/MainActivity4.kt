@@ -3,6 +3,7 @@ package com.example.pantallaclases7
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pantallaclases7.databinding.ActivityMain4Binding
@@ -17,15 +18,12 @@ class MainActivity4 : AppCompatActivity() {
         val binding = ActivityMain4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var vmochila : Int = 100
-        var mPrefs = getSharedPreferences("Objetos_mochila",Context.MODE_PRIVATE)
-        var mochila = mPrefs.getInt("mochila",vmochila)
-
-        guardar(mochila)
+        val user = intent.getSerializableExtra("personaje") as Personaje
+        val textView = findViewById<TextView>(R.id.textoMochila)
 
 
+        textView.text = "Espacio mochila : ${user.getPesoMochila()}/100"
 
-        binding.textoMochila.text = "Espacio mochila : ${mochila}/100"
 
 
         binding.dado.setOnClickListener(){
@@ -35,7 +33,7 @@ class MainActivity4 : AppCompatActivity() {
 
                 1 -> {
                     val intent = Intent(this@MainActivity4, MainActivityObjeto::class.java)
-                    intent.putExtra("mochila",mochila)
+                    intent.putExtra("personaje", user)
                     startActivity(intent)
                 }
 
@@ -45,6 +43,7 @@ class MainActivity4 : AppCompatActivity() {
                 }
                 3 -> {
                     val intent = Intent(this@MainActivity4, MainActivityMercader::class.java)
+                    intent.putExtra("personaje", user)
                     startActivity(intent)
                 }
                 4 -> {
@@ -54,14 +53,6 @@ class MainActivity4 : AppCompatActivity() {
             }
         }
     }
-    fun guardar (Int:Int){
-        var mochila:Int = intent.getIntExtra("mochila",100)
-        var mPrefs = getSharedPreferences("Objetos_mochila",Context.MODE_PRIVATE)
-        var editor = mPrefs.edit()
-        editor.putInt("mochila", mochila)
-        editor.commit()
-        Toast.makeText(this,"Se ha guardado",Toast.LENGTH_LONG).show()
 
-    }
 }
 

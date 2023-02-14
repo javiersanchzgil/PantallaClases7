@@ -3,6 +3,7 @@ package com.example.pantallaclases7
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.pantallaclases7.databinding.ActivityMain2Binding
 import com.example.pantallaclases7.databinding.ActivityMain3Binding
 
@@ -17,8 +18,6 @@ class MainActivity3 : AppCompatActivity() {
         var clase = intent.getStringExtra("clase")
         var raza = intent.getStringExtra("raza")
         var mochila:Int = 100
-
-
 
 
         binding.fuerza2.setText((10..15).random().toString())
@@ -59,7 +58,8 @@ class MainActivity3 : AppCompatActivity() {
 
         binding.botonComenzar.setOnClickListener(){
             val intent = Intent(this@MainActivity3, MainActivity4::class.java)
-            intent.putExtra("mochila",mochila)
+            val personaje = Personaje("Jugador",100,"Joven","Humano","Mago")
+            intent.putExtra("personaje", personaje)
             startActivity(intent)
 
         }

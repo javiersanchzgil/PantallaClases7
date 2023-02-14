@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import com.example.pantallaclases7.databinding.ActivityMainMercaderBinding
 import com.example.pantallaclases7.databinding.ActivityMainObjetoBinding
@@ -16,37 +17,26 @@ class MainActivityObjeto : AppCompatActivity() {
         val binding = ActivityMainObjetoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var vmochila = 100
-        var mPrefs = getSharedPreferences("Objetos_mochila",Context.MODE_PRIVATE)
-        var mochila = mPrefs.getInt("mochila",vmochila)
 
-        guardar(mochila)
+        val user = intent.getSerializableExtra("personaje") as Personaje
+        val textView = findViewById<TextView>(R.id.mochilaObjeto)
 
-
-
-        binding.mochilaObjeto.text = "Espacio mochila : ${mochila}/100"
+        textView.text = "Espacio mochila : ${user.getPesoMochila()}/100"
 
 
         binding.recoger.setOnClickListener(){
-            mochila -= 5
+            //restar peso mochila
+            user.setPesoMochila(user.getPesoMochila() - 5)
             val intent = Intent(this@MainActivityObjeto, MainActivity4::class.java)
-            intent.putExtra("mochila",mochila)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 
         binding.continuarObjeto.setOnClickListener(){
             val intent = Intent(this@MainActivityObjeto, MainActivity4::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
     }
 
-    fun guardar (Int:Int){
-        var mochila:Int = intent.getIntExtra("mochila",100)
-        var mPrefs = getSharedPreferences("Objetos_mochila", Context.MODE_PRIVATE)
-        var editor = mPrefs.edit()
-        editor.putInt("mochila", mochila)
-        editor.commit()
-        Toast.makeText(this,"Se ha guardado", Toast.LENGTH_LONG).show()
-
-    }
 }
