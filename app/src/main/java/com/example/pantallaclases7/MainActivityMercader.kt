@@ -55,13 +55,14 @@ class MainActivityMercader : AppCompatActivity() {
                 mochila += binding.editTextNumber.text.toString().toInt()
                 binding.imageView4.setImageResource(R.drawable.mercader)
                 binding.comprar.isVisible = false
-                binding.vender.isVisible = true
-                binding.cancelar.isVisible = true
-                binding.comerciar.isVisible = false
-                binding.continuarmercader.isVisible = false
+                binding.vender.isVisible = false
+                binding.cancelar.isVisible = false
+                binding.comerciar.isVisible = true
+                binding.continuarmercader.isVisible = true
                 binding.textoMicro.isVisible = false
                 binding.editTextNumber.isVisible = false
                 binding.comprobar.isVisible = false
+                binding.editTextNumber.clearFocus()
 
             }
         }
@@ -100,6 +101,10 @@ class MainActivityMercader : AppCompatActivity() {
                     if (vender > mochila){
                         binding.textoMicro.setText("No tienes tantos objetos")
                     }
+                    else
+                        if (vender == 0){
+                            binding.textoMicro.setText("No puedes vender 0 objetos")
+                        }
                     else{
                         binding.textoMicro.setText("Has vendido $vender objetos")
                         mochila = mochila - vender
@@ -111,9 +116,15 @@ class MainActivityMercader : AppCompatActivity() {
                             binding.cancelar.isVisible = false
                             binding.comerciar.isVisible = true
                             binding.continuarmercader.isVisible = true
+                            binding.comprobar.isVisible = false
+                            binding.textoMicro.isVisible = false
+                            binding.editTextNumber.isVisible = false
+                            binding.editTextNumber.clearFocus()
+
 
                         }
                     }
+            }
             }
             binding.cancelar.setOnClickListener(){
                 binding.imageView4.setImageResource(R.drawable.mercader)
