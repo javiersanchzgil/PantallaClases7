@@ -27,8 +27,8 @@ class MainActivity4 : AppCompatActivity() {
 
 
         binding.dado.setOnClickListener(){
-            var num = (1..4).random()
-
+           // var num = (1..4).random()
+            var num = 3
             when(num){
 
                 1 -> {
