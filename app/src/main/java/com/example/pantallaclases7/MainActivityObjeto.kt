@@ -27,6 +27,7 @@ class MainActivityObjeto : AppCompatActivity() {
         binding.recoger.setOnClickListener(){
             //restar peso mochila
             user.setPesoMochila(user.getPesoMochila() - 5)
+            user.setObjetos(user.getObjetos() + 1)
             val intent = Intent(this@MainActivityObjeto, MainActivity4::class.java)
             intent.putExtra("personaje", user)
             startActivity(intent)

@@ -14,6 +14,8 @@ class MainActivity3 : AppCompatActivity() {
         val binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val user = intent.getSerializableExtra("personaje") as Personaje
+
 
         var clase = intent.getStringExtra("clase")
         var raza = intent.getStringExtra("raza")
@@ -58,13 +60,14 @@ class MainActivity3 : AppCompatActivity() {
 
         binding.botonComenzar.setOnClickListener(){
             val intent = Intent(this@MainActivity3, MainActivity4::class.java)
-            val personaje = Personaje("Jugador",100,"Joven","Humano","Mago")
-            intent.putExtra("personaje", personaje)
+            user.setNombre(binding.nombre.text.toString())
+            intent.putExtra("personaje", user)
             startActivity(intent)
 
         }
         binding.botonVolver.setOnClickListener(){
             val intent = Intent(this@MainActivity3, MainActivity::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 

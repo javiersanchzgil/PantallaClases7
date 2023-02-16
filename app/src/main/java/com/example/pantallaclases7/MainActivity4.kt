@@ -22,7 +22,7 @@ class MainActivity4 : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textoMochila)
 
 
-        textView.text = "Espacio mochila : ${user.getPesoMochila()}/100"
+        textView.text = "Espacio mochila : ${user.getPesoMochila()}/100, Numero de objetos: ${user.getObjetos()}"
 
 
 
