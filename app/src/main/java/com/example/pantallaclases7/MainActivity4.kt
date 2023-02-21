@@ -27,8 +27,8 @@ class MainActivity4 : AppCompatActivity() {
 
 
         binding.dado.setOnClickListener(){
-           // var num = (1..4).random()
-            var num = 3
+           var num = (1..4).random()
+            //var num = 4
             when(num){
 
                 1 -> {
@@ -39,6 +39,7 @@ class MainActivity4 : AppCompatActivity() {
 
                 2 -> {
                     val intent = Intent(this@MainActivity4, MainActivityCiudad::class.java)
+                    intent.putExtra("personaje", user)
                     startActivity(intent)
                 }
                 3 -> {
@@ -48,6 +49,7 @@ class MainActivity4 : AppCompatActivity() {
                 }
                 4 -> {
                     val intent = Intent(this@MainActivity4, MainActivityEnemigo::class.java)
+                    intent.putExtra("personaje", user)
                     startActivity(intent)
                 }
             }

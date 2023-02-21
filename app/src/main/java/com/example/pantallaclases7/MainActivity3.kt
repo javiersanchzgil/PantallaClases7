@@ -23,8 +23,10 @@ class MainActivity3 : AppCompatActivity() {
 
 
         binding.fuerza2.setText((10..15).random().toString())
-
         binding.defensa2.setText((1..5).random().toString())
+
+        user.setFuerza(binding.fuerza2.text.toString().toInt())
+        user.setDefensa(binding.defensa2.text.toString().toInt())
 
         println(clase)
 

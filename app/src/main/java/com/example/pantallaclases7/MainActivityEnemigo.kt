@@ -20,11 +20,13 @@ class MainActivityEnemigo : AppCompatActivity() {
 
         binding.huir.setOnClickListener(){
             val intent = Intent(this@MainActivityEnemigo, MainActivity4::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 
         binding.luchar.setOnClickListener(){
-            val intent = Intent(this@MainActivityEnemigo, MainActivity4::class.java)
+            val intent = Intent(this@MainActivityEnemigo, PeleaEnemigo::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
     }

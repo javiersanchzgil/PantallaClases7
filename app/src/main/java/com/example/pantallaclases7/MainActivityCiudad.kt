@@ -20,11 +20,13 @@ class MainActivityCiudad : AppCompatActivity() {
 
         binding.continuar.setOnClickListener(){
             val intent = Intent(this@MainActivityCiudad, MainActivity4::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 
         binding.entrarCiudad.setOnClickListener(){
             val intent = Intent(this@MainActivityCiudad, MainActivity4::class.java)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 

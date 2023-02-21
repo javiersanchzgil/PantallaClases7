@@ -9,6 +9,8 @@ package com.example.pantallaclases7
         private var clase: String,
         private var objetos: Int,
         private var vida: Int,
+        private var fuerza: Int,
+        private var defensa: Int,
 
         ) : java.io.Serializable {
         var monedero = HashMap<Int, Int>()
@@ -77,8 +79,25 @@ package com.example.pantallaclases7
             this.vida = vida
         }
 
+        fun getFuerza(): Int {
+            return fuerza
+        }
+
+        fun setFuerza(fuerza: Int) {
+            this.fuerza = fuerza
+        }
+
+        fun getDefensa(): Int {
+            return defensa
+        }
+
+        fun setDefensa(defensa: Int) {
+            this.defensa = defensa
+        }
+
+
        //crear el constructor de la clase personaje vacio
-        constructor() : this("", 0, "", "", "", 0, 0) {
+        constructor() : this("", 0, "", "", "", 0, 0, 0, 0) {
             this.monedero = monedero
         }
 

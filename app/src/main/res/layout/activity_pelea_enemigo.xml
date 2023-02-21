@@ -6,4 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".PeleaEnemigo">
 
+    <TextView
+        android:id="@+id/vidaEnemigo"
+        android:layout_width="284dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="textEnd"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vidaPersonaje"
+        android:layout_width="270dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="308dp"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonatacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="atacar"
+        app:layout_constraintEnd_toStartOf="@+id/botonHuir"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <Button
+        android:id="@+id/botonHuir"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="32dp"
+        android:text="huir"
+        app:layout_constraintBottom_toTopOf="@+id/botonObjeto"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/botonObjeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Objeto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonHuir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="149dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/vidaPersonaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidaEnemigo"
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/aaa__1_" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        app:layout_constraintBottom_toTopOf="@+id/textoInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidaPersonaje"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/javi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
