@@ -45,6 +45,7 @@ class MainActivityMercader : AppCompatActivity() {
         }
 
         binding.comprar.setOnClickListener() {
+            binding.textoMicro.setText("Puedes comprar este microfono de precio 125 ¿Dime la cantidad?")
             binding.imageView4.setImageResource(R.drawable.microfono)
             binding.textoMicro.isVisible = true
             binding.editTextNumber.isVisible = true
