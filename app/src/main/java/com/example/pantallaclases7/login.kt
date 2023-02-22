@@ -9,6 +9,8 @@ import com.example.pantallaclases7.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
 
+
+
 class login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,7 +70,7 @@ class login : AppCompatActivity() {
     }
 
     private fun showHome(email: String, provider: ProviderType) {
-        val homeIntent: Intent = Intent(this, usersesion::class.java).apply {
+        val homeIntent: Intent = Intent(this@login, usersesion::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
