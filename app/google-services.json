@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "382764325909",
+    "project_id": "juegopmdm-b6fa0",
+    "storage_bucket": "juegopmdm-b6fa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382764325909:android:5a1874d3f5ea1b1c5c021c",
+        "android_client_info": {
+          "package_name": "com.example.pantallaclases7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382764325909-p85f2h2eo0vjf75pq38dnkgepkhmrgnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Ee1Yqi7Rf7EexQ9pm7d6x-pm6CiHWZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382764325909-p85f2h2eo0vjf75pq38dnkgepkhmrgnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
