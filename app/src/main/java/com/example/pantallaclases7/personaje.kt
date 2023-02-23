@@ -2,6 +2,7 @@ package com.example.pantallaclases7
 
 
     data class Personaje(
+        private var correo: String,
         private var nombre: String,
         private var pesoMochila: Int,
         private var estadoVital: String,
@@ -95,9 +96,17 @@ package com.example.pantallaclases7
             this.defensa = defensa
         }
 
+        fun getCorreo(): String {
+            return correo
+        }
+
+        fun setCorreo(correo: String) {
+            this.correo = correo
+        }
+
 
        //crear el constructor de la clase personaje vacio
-        constructor() : this("", 0, "", "", "", 0, 0, 0, 0) {
+        constructor() : this("","", 0, "", "", "", 0, 0, 0, 0) {
             this.monedero = monedero
         }
 

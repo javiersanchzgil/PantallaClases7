@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         var clase = ""
         var clasePer = ""
 
+        val user = intent.getSerializableExtra("personaje") as Personaje
+
         binding.ladron.setOnClickListener(){
             binding.imagen.setImageResource(R.drawable.imagenladron)
             imagenR=R.drawable.imagenladron
@@ -48,10 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.aceptar.setOnClickListener(){
             val intent = Intent(this@MainActivity, MainActivity2::class.java)
+            user.setClase(clasePer)
             intent.putExtra("ImagenClase", imagenR)
             intent.putExtra("clase",clase)
-            val personaje = Personaje(" ",100," ","",clasePer,0,100,0,0)
-            intent.putExtra("personaje", personaje)
+            intent.putExtra("personaje", user)
             startActivity(intent)
         }
 

@@ -33,7 +33,7 @@ class login : AppCompatActivity() {
                     binding.nombreuser.text.toString(), binding.contrauser.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        showHome(it.result?.user?.email ?: "", tipo.JUGADOR)
                     } else {
                         showAlert()
                     }
@@ -48,7 +48,7 @@ class login : AppCompatActivity() {
                     binding.nombreuser.text.toString(), binding.contrauser.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        showHome(it.result?.user?.email ?: "", tipo.JUGADOR)
                     } else {
                         showAlert()
                     }
@@ -69,10 +69,10 @@ class login : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showHome(email: String, tipo: tipo) {
         val homeIntent: Intent = Intent(this@login, usersesion::class.java).apply {
             putExtra("email", email)
-            putExtra("provider", provider.name)
+            putExtra("tipo", tipo.name)
         }
         startActivity(homeIntent)
     }

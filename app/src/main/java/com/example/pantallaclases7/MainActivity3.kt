@@ -61,7 +61,7 @@ class MainActivity3 : AppCompatActivity() {
         }
 
         binding.botonComenzar.setOnClickListener(){
-            val intent = Intent(this@MainActivity3, MainActivity4::class.java)
+            val intent = Intent(this@MainActivity3, elegirPersonaje::class.java)
             user.setNombre(binding.nombre.text.toString())
             intent.putExtra("personaje", user)
             startActivity(intent)
